@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Navbar hela skiten asså*/
+
+.NavbarContainer {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: center; /* Centrerar hela innehållet horisontellt */
+    align-items: center;
+    height: 64px;
+    background-color: #f4f1ea;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+}
+
+.NavbarContainer > * {
+    margin: 0 40px; /* Justerar avståndet mellan logotypen och navigeringsmenyn */
+}
+
+/* goodreads texten på översta delen på skärmen*/
+
+.Logo {
+    font-size: 30px;
+    font-weight:lighter;
+}
+
+.navbaritems {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Texten på Översta Delen på Skärmen*/
+
+.navbaritems li {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.navbaritems li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+}
+
+.navbaritems li a:hover {
+    background-color: rgb(58, 48, 43);
+    color: #fff;
+    border-radius: 12px;
+}
+
+/* Searchbar CSS */
+
+.search-container {
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+
+.searchbar {
+    width: 350px;
+    padding: 10px 40px 10px 20px; /* Extra padding för att skapa utrymme för ikonen */
+    border: 1px solid #ccc;
+    font-size: 13px;
+}
+
+.search-container i {
+    position: absolute;
+    right: 15px; 
+    color: #333;
+}
+
+/* Icons CSS */
+.Icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.Icons i {
+    font-size: 15px; /* Storlek på ikonerna */
+    color: #fff; /* Ikonens färg */
+    background-color: rgb(172, 172, 156); 
+    border-radius: 50%; 
+    padding: 10px; /* Justerar storleken på bakgrunden */
+    margin: 10px; /* Avstånd mellan ikonerna */
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.Icons i:hover {
+    background-color:  rgb(58, 48, 43); /* Ändrar bakgrundsfärgen vid hover */
+    transform: scale(1.1); /* Förstorar ikonen vid hover */
+}
+
+/*----------------------------------------------------------------------------------------------------------*/
+/*Container för collum 1 o 2 */
+.container {
+    display: flex;
+    height: 200vh;
+    justify-content: space-between; /* Skapar utrymme mellan kolumnerna */
+}
+
+/*collum2*/
+.column2{
+    position: absolute;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    flex: 0 0 1000px; /* Sätt specifik bredd och hindra den från att ändras */
+    margin: 10px;
+    margin-right: 100px; 
+    z-index: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1{
+    font-style:normal;
+    font-weight:200;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+h3{
+    opacity: 75%;
+    font-style:normal;
+    font-weight:lighter;
+    font-size: 25px;
+    margin-right: 250px;
+}
+h2{
+    font-weight:lighter;
+    margin-right: 250px;
+    padding-top: 5px;
+    letter-spacing: 2px;
+}
+
+h2.hover{
+    text-decoration-line: underline;
+}
+
+/* Styla texten */
+.text-container {
+    position: relative;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin-left: 610px;
+}
+
+.text-container p {
+    margin-bottom: 15px; /* Avstånd mellan stycken */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+.underline {
+    text-decoration: underline;
+    
+}
+
+.bookinformation p {
+font-size: 15px;
+}
+
+.genreunderline{
+    text-decoration: underline;
+    text-decoration-color: green;
+    padding: 2px;
+}
+
+/*----------------------------------------------------------------------------------------------------------*/
+/*collum1 Med Bild och Knappar*/
+.column1 {
+    position: sticky;
+    top: 8.5%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    flex: 0 0 400px; /* Sätt specifik bredd och hindra den från att ändras */
+    margin: 10px;
+    height: 650px;
+    margin-left: 250px;
+    z-index: 2;
+}
+
+img{
+    height: 400px;
+    width: 250px;
+    object-fit: cover;  
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 3%;
+    transition: transform 0.3s;
+}
+
+img:hover{
+    transform: scale(1.05); 
+}
+/*----------------------------------------------------------------------------------------------------------*/
+/* Styla stjärnorna */
+.stars {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.star {
+    font-size: 45px; /* Storlek på stjärnorna */
+    color: lightgray; 
+   border: 10px;
+   border-color: black;
+    cursor: pointer; 
+    transition: color 0.3s; /* Mjuk övergång när färgen ändras */
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: orange; 
+}
+
+.star.filled {
+    color: orange; 
+}
+
+.star-rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: orange;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+
+}
+
+.star-rating p{
+    color: darkgray;
+    font-weight:lighter;
+    font-size: 17px;
+}
+
+.star-rating h1{
+    color: black;
+    padding: 5px;
+}
+
+.star-rating:hover{
+    background-color: lightgray;
+    border-radius: 8px;
+    
+}
+
+/*----------------------------------------------------------------------------------------------------------*/
+/*Knappernas CSS*/
+button {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 17px;
+    background-color: white;
+    border: 2px solid gray; /* Sätt samma border-color för alla knappar */
+    font-family: monospace; 
+    cursor: pointer;
+}
+
+.button2 {
+    border-color: green;
+    cursor: pointer;
+}
+
+button:focus,
+button:active {
+    outline: none; /* Ta bort standard-outline vid fokus */
+    border-color: darkgray; /* Behåll samma färg vid klick */
+}
+
+button:hover{
+    transition: 4ms;
+    background-color: lightgray    
+}
+/*----------------------------------------------------------------------------------------------------------*/
